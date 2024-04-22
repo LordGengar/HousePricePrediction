@@ -1,0 +1,102 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body
+        {
+            background-image:url("{%static 'blmat.jpg'%}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <div class="main">
+        <h1>Please enter the values needed:</h1>
+        <form action="result">
+            <div class="row">
+                <div class="col-sm-4" style="background-color: bisque;">
+                    <p>Enter the square feet needed</p>
+                    <input type="text" name="n1">
+                    <p></p>
+                    <p></p>
+                    <h1></h1>
+                </div>
+                <div class="col-sm-4" style="background-color:chartreuse;">
+                    <p>Enter the distance to main road</p>
+                    <input type="text" name="n2">
+                </div>
+                <div class="col-sm-4" style="background-color:cornflowerblue;">
+                    <p>Enter number of bedrooms</p>
+                    <input type="text" name="n3">
+                    <p></p>
+                    <p></p>
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="background-color:forestgreen;">
+                    <p>Enter number of rooms</p>
+                    <input type="text" name="n4">
+                </div>
+                <div class="col-sm-4" style="background-color:gray;">
+                    <p>Enter number of bathrooms</p>
+                    <input type="text" name="n5">
+                </div>
+                <div class="col-sm-4" style="background-color:rgb(123, 85, 115);">
+                    <p>Select the area</p>
+                    <select name="n6" id="area">
+                        <option value=0>Adyar</option>
+                        <option value=1>Anna Nagar</option>
+                        <option value=2>Chromepet</option>
+                        <option value=3>KK Nagar</option>
+                        <option value=4>Karapakkam</option>
+                        <option value=5>T Nagar</option>
+                        <option value=6>Velachery</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="PREDICT">
+            </div>
+        </form>
+        <div class="row">
+            <h2>{{result2}}</h2>
+        </div>
+    </div>
+</body>
+</html>

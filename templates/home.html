@@ -1,0 +1,36 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            margin-top: 15px;
+            font-size: 40px;
+        }
+        h1{
+            font-size:60px;
+        }
+        input[type=submit]{
+            background-color: #000; 
+            color:whitesmoke;
+            cursor: pointer;
+            padding: 16px 32px;
+        }
+        body{
+            background-image:url("{%static 'h1.jpg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the house price prediction system</h2>
+    <form action="predict">
+        <input type="submit" value="START">
+    </form>
+</body>
+</html>
